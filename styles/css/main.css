@@ -15,6 +15,8 @@ body {
       line-height: .5em; }
     body .contact-form .errors {
       color: red; }
+    body .contact-form .success {
+      color: green; }
     body .contact-form textarea {
       height: 100px;
       width: 97%;

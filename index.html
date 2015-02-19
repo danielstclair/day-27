@@ -18,31 +18,36 @@
 		<div class="entries" ng-controller="submitting">
 			<p>Name</p>
 			<div class="input">
-				<input id="name" type="text" placeholder="Sally Smith">
+				<!-- <input id="names" ng-model="names" type="text" placeholder="Sally Smith"> -->
+				<input id="name" ng-model="names" type="text" placeholder="Sally Smith">
 				<p ng-show="errorName" class="errors">Name cannot be left empty</p>
+				<p ng-show="successName" class="success">Success!!!</p>
 			</div>
 		</div>
 		<div class="entries">
 			<p>Email</p>
 			<div class="input">
-				<input id="email" type="text" placeholder="ssmith@gmail.com">
+				<input id="email" ng-model="email"  type="text" placeholder="ssmith@gmail.com">
 				<p ng-show="errorEmail1" class="errors">Email cannot be left empty</p>
 				<p ng-show="errorEmail2" class="errors">Email must contain an '@'</p>
+				<p ng-show="successEmail" class="success">Success!!!</p>
 			</div>
 		</div>
 		<div class="entries">
 			<p>Website</p>
 			<div class="input">
-				<input id="website" type="text" placeholder="http://mssmith.net">
+				<input id="website" ng-model="website" type="text" placeholder="http://mssmith.net">
 				<p ng-show="errorWeb1" class="errors">Website cannot be left empty</p>
 				<p ng-show="errorWeb2" class="errors">Website must start with http://</p>
+				<p ng-show="successWeb" class="success">Success!!!</p>
 			</div>
 		</div>
 		<div class="entries">
 			<p>Messages</p>
 			<div class="input">
-				<textarea id="messages" type="text" placeholder="A friendly message..."></textarea>
+				<textarea id="messages" ng-model="messages" type="text" placeholder="A friendly message..."></textarea>
 				<p ng-show="errorMessage" class="errors">Message cannot be empty</p>
+				<p ng-show="successMessage" class="success">Success!!!</p>
 			</div>
 		</div>
 		
