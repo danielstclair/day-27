@@ -1,10 +1,15 @@
 angular.module('app.controller', []).controller('submitting', function($scope){
-	// $scope.contactForm = false;
+	$scope.contactForm = true;
 
 	// $scope.names = $('#names').val();
 
 	$scope.checkInput = function(){
 		console.log('hola');
+		if($scope.successMessage == true && $scope.successWeb == true && $scope.successEmail == true && $scope.successName == true){
+			console.log('testing');
+			$scope.contactForm = false;
+		}
+
 		$scope.$watch('name', function(){
 			if(!$scope.name){
 				$scope.errorName = true;
@@ -48,6 +53,8 @@ angular.module('app.controller', []).controller('submitting', function($scope){
 				$scope.successMessage = true;
 			}
 		})
+
+
 	}
 
 	

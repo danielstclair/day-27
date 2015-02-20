@@ -12,14 +12,13 @@
 	<script type="text/javascript" src="scripts/app.js"></script>
 	<script type="text/javascript" src="scripts/controller.js"></script>
 
-<div ngshow="contactForm" ng-controller="submitting">
-	<div class="contact-form">
+	<div class="contact-form" ngshow="contactForm" ng-controller="submitting">
 		<h1>Contact Us</h1>
-		<div class="entries" ng-controller="submitting">
+		<div class="entries">
 			<p>Name</p>
 			<div class="input">
 				<!-- <input id="names" ng-model="names" type="text" placeholder="Sally Smith"> -->
-				<input id="name" ng-model="names" type="text" placeholder="Sally Smith">
+				<input id="name" ng-model="name" type="text" placeholder="Sally Smith">
 				<p ng-show="errorName" class="errors">Name cannot be left empty</p>
 				<p ng-show="successName" class="success">Success!!!</p>
 			</div>
@@ -50,11 +49,10 @@
 				<p ng-show="successMessage" class="success">Success!!!</p>
 			</div>
 		</div>
-		
 			<a href="#" id="submit-button" ng-click="checkInput()" ><div class="submit">Submit</div></a>
-		
 	</div>
-</div>
+
+
 
 </body>
 </html>
